@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Latest Headlines View Controller-->
+        <scene sceneID="lzN-bR-EU5">
+            <objects>
+                <viewController storyboardIdentifier="LatestHeadlinesViewController" extendedLayoutIncludesOpaqueBars="YES" id="UKO-3C-zoJ" customClass="LatestHeadlinesViewController" customModule="Lentach" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zay-tY-Wvr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GIz-87-MQv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GIz-87-MQv" firstAttribute="leading" secondItem="Zay-tY-Wvr" secondAttribute="leading" id="J1K-5t-21R"/>
+                            <constraint firstItem="GIz-87-MQv" firstAttribute="bottom" secondItem="Zay-tY-Wvr" secondAttribute="bottom" id="MQX-TV-OAk"/>
+                            <constraint firstItem="GIz-87-MQv" firstAttribute="top" secondItem="Zay-tY-Wvr" secondAttribute="top" id="UJM-eE-s22"/>
+                            <constraint firstItem="GIz-87-MQv" firstAttribute="trailing" secondItem="Zay-tY-Wvr" secondAttribute="trailing" id="cOP-07-cPM"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <connections>
+                        <outlet property="tableView" destination="GIz-87-MQv" id="8Kj-wA-tMP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Cd-tV-i7a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="176.80000000000001" y="82.3088455772114"/>
+        </scene>
+    </scenes>
+</document>

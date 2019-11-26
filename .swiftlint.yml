@@ -1,0 +1,13 @@
+disabled_rules:
+  - identifier_name
+  - mark
+ 
+line_length: 300
+ 
+file_length:
+  warning: 1000
+  error: 1300 
+  
+type_body_length:
+  warning: 500
+  error: 1000 

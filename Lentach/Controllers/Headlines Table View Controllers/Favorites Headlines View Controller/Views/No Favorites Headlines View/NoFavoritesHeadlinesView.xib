@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Akrobat-SemiBold.otf">
+            <string>Akrobat-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="NV3-fN-iE6" customClass="NoFavoritesHeadlinesView" customModule="Lentach" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="212"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y16-KD-fn6">
+                    <rect key="frame" x="15" y="0.0" width="345" height="212"/>
+                    <string key="text">Пока нет избранных новостей.  
+Избранные новости будут доступны без подключения к Интернету.</string>
+                    <fontDescription key="fontDescription" name="Akrobat-SemiBold" family="Akrobat" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.12549019607843137" green="0.12549019607843137" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Y16-KD-fn6" secondAttribute="trailing" constant="15" id="1Cw-Ky-ojm"/>
+                <constraint firstItem="Y16-KD-fn6" firstAttribute="leading" secondItem="NV3-fN-iE6" secondAttribute="leading" constant="15" id="DVF-bN-Ggv"/>
+                <constraint firstAttribute="bottom" secondItem="Y16-KD-fn6" secondAttribute="bottom" id="hhz-0j-CQj"/>
+                <constraint firstItem="Y16-KD-fn6" firstAttribute="top" secondItem="NV3-fN-iE6" secondAttribute="top" id="hoe-0Z-qgP"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="D35-hF-WFz"/>
+            <point key="canvasLocation" x="1.6000000000000001" y="-159.22038980509745"/>
+        </view>
+    </objects>
+</document>

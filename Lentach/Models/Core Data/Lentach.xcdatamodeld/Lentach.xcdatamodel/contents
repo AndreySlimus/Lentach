@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18A391" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Headline" representedClassName=".Headline" syncable="YES">
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="associatedNews" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="News" inverseName="associatedHeadlines" inverseEntity="News" syncable="YES"/>
+        <relationship name="imageMetadata" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="HeadlineImageMetadata" inverseName="headline" inverseEntity="HeadlineImageMetadata" syncable="YES"/>
+        <relationship name="info" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="HeadlineInfo" inverseName="headline" inverseEntity="HeadlineInfo" syncable="YES"/>
+        <relationship name="news" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="News" inverseName="headline" inverseEntity="News" syncable="YES"/>
+        <relationship name="urls" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="HeadlineURLs" inverseName="headline" inverseEntity="HeadlineURLs" syncable="YES"/>
+    </entity>
+    <entity name="HeadlineImageMetadata" representedClassName=".HeadlineImageMetadata" syncable="YES">
+        <attribute name="author" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="caption" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="URI" syncable="YES"/>
+        <relationship name="headline" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Headline" inverseName="imageMetadata" inverseEntity="Headline" syncable="YES"/>
+    </entity>
+    <entity name="HeadlineInfo" representedClassName=".HeadlineInfo" syncable="YES">
+        <attribute name="modified" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="rightcol" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="headline" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Headline" inverseName="info" inverseEntity="Headline" syncable="YES"/>
+    </entity>
+    <entity name="HeadlineURLs" representedClassName=".HeadlineURLs" syncable="YES">
+        <attribute name="api" optional="YES" attributeType="URI" syncable="YES"/>
+        <attribute name="external" optional="YES" attributeType="URI" syncable="YES"/>
+        <attribute name="site" optional="YES" attributeType="URI" syncable="YES"/>
+        <relationship name="headline" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Headline" inverseName="urls" inverseEntity="Headline" syncable="YES"/>
+    </entity>
+    <entity name="News" representedClassName=".News" syncable="YES">
+        <attribute name="favorites" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="associatedHeadlines" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Headline" inverseName="associatedNews" inverseEntity="Headline" syncable="YES"/>
+        <relationship name="headline" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Headline" inverseName="news" inverseEntity="Headline" syncable="YES"/>
+        <relationship name="video" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="NewsVideo" inverseName="news" inverseEntity="NewsVideo" syncable="YES"/>
+    </entity>
+    <entity name="NewsVideo" representedClassName=".NewsVideo" syncable="YES">
+        <attribute name="imageURL" optional="YES" attributeType="URI" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="watchURL" optional="YES" attributeType="URI" syncable="YES"/>
+        <relationship name="news" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="News" inverseName="video" inverseEntity="News" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Headline" positionX="-260.703125" positionY="51.46875" width="128" height="148"/>
+        <element name="HeadlineImageMetadata" positionX="-76.37890625" positionY="-110.2109375" width="128" height="103"/>
+        <element name="HeadlineInfo" positionX="-75.4375" positionY="51.34765625" width="128" height="103"/>
+        <element name="HeadlineURLs" positionX="-74.13671875" positionY="166.9375" width="128" height="103"/>
+        <element name="News" positionX="-530.0546875" positionY="51.6171875" width="128" height="118"/>
+        <element name="NewsVideo" positionX="-715.09375" positionY="-16.59375" width="128" height="103"/>
+    </elements>
+</model>

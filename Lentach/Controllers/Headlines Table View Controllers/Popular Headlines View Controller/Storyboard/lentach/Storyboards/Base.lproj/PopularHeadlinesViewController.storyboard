@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Popular Headlines View Controller-->
+        <scene sceneID="ADl-cf-F8l">
+            <objects>
+                <viewController storyboardIdentifier="PopularHeadlinesViewController" extendedLayoutIncludesOpaqueBars="YES" id="3T4-wR-xs2" customClass="PopularHeadlinesViewController" customModule="Lentach" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="O9M-YM-7ej">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8on-Z5-b2c">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="8on-Z5-b2c" firstAttribute="trailing" secondItem="O9M-YM-7ej" secondAttribute="trailing" id="9zA-jB-BQZ"/>
+                            <constraint firstItem="8on-Z5-b2c" firstAttribute="leading" secondItem="O9M-YM-7ej" secondAttribute="leading" id="EE0-WY-Zey"/>
+                            <constraint firstItem="8on-Z5-b2c" firstAttribute="top" secondItem="O9M-YM-7ej" secondAttribute="top" id="ZRh-9B-3Qq"/>
+                            <constraint firstItem="8on-Z5-b2c" firstAttribute="bottom" secondItem="O9M-YM-7ej" secondAttribute="bottom" id="daN-d3-q0d"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <connections>
+                        <outlet property="tableView" destination="8on-Z5-b2c" id="sJw-wu-8OQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Uf-Tw-T37" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="797.60000000000002" y="301.79910044977515"/>
+        </scene>
+    </scenes>
+</document>
